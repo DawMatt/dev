@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+    # Development related
+    test-sqlite:
+        environment:
+            - PYTHONDONTWRITEBYTECODE=1
+        build:
+            dockerfile: docker/app/Dockerfile
+            context: .
+        entrypoint: pytest
+        volumes:
+            # mounts code dir so don't rebuild container when code changes
+            - ./ThoughtsBackend:/opt/code
+
+# docker-compose build test-sqlite
+# docker-compose run test-sqlite
+# docker-compose run test-sqlite -k validation

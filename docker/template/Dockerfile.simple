@@ -1,0 +1,6 @@
+# scratch is a special container that is totally empty
+FROM scratch
+COPY Dockerfile.simple /Dockerfile.txt
+
+# docker build -f Dockerfile.simple --tag simple .
+# docker images

@@ -1,0 +1,6 @@
+docker-compose ps
+docker-compose build test-sqlite
+docker-compose run test-sqlite
+docker-compose up -d server
+docker-compose logs server
+docker-compose down

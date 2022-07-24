@@ -1,0 +1,16 @@
+# FROM node:16-alpine
+# ~190 Mb
+# FROM node:16-slim
+# 245 Mb
+FROM node:16
+# 975 Mb
+
+ENV NODE_ENV=production
+
+RUN mkdir -p /opt/
+WORKDIR /opt
+RUN npm install --omit=dev --location=global @stoplight/prism-cli
+
+# docker build -f Dockerfile.npm --tag npm .
+# docker images
+# docker run -it npm /bin/sh

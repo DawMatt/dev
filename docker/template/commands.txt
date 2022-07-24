@@ -1,0 +1,7 @@
+# docker build -f Dockerfile.run --tag container-run .
+# docker images
+# docker run container-run cat /opt/dockerfile.txt
+# docker run container-run /bin/sh -c 'cat /opt/dockerfile.txt > out.txt'
+# docker run -it container-run /bin/sh
+# docker ps
+# docker stop 123

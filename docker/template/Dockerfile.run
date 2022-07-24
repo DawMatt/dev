@@ -1,0 +1,11 @@
+# scratch is a special container that is totally empty
+FROM alpine
+
+RUN mkdir -p /opt/
+COPY Dockerfile.simple /opt/dockerfile.txt
+
+# docker build -f Dockerfile.run --tag container-run .
+# docker images
+# docker run container-run cat /opt/dockerfile.txt
+# docker run container-run /bin/sh -c 'cat /opt/dockerfile.txt > out.txt'
+# docker run -it container-run /bin/sh
