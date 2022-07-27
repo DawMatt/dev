@@ -1,2 +1,3 @@
-# dev
-Dev information, notes and templates
+# Dev
+
+Development information, notes and templates
