@@ -1,0 +1,17 @@
+# Dockerfile
+#
+# Creates a container that shares all files in the current folder
+#
+# Usage:
+#   Copy Dockerfile and nginx.conf into the same folder as the
+#   files to share, then run the docker build there
+
+FROM nginx:1.23.1
+WORKDIR /opt/www
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+ADD . .
+CMD ["nginx", "-g", "daemon off;"]
+
+# Example commands:
+# docker build -f Dockerfile.nginxlocal --tag nginxlocal:latest .
+# docker run -d --rm -p8080:8080 nginxlocal:latest

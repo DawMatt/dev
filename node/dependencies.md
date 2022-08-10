@@ -6,14 +6,14 @@
 
 Yarn
 
-```
+```sh
 yarn update # Updates minor versions and package.json
 yarn outdated # Identify major package updates
 ```
 
 Node
 
-```
+```sh
 npm update # Updates minor versions and package.json
 npm outdated # Identify major package updates
 
